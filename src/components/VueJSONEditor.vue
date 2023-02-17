@@ -3,32 +3,32 @@
 </template>
 
 <script>
-import { JSONEditor } from "vanilla-jsoneditor";
+import { JSONEditor } from 'vanilla-jsoneditor';
 
 // JSONEditor properties as of version 0.3.60
 const propNames = [
-  "content",
-  "mode",
-  "mainMenuBar",
-  "navigationBar",
-  "statusBar",
-  "readOnly",
-  "indentation",
-  "tabSize",
-  "escapeControlCharacters",
-  "escapeUnicodeCharacters",
-  "validator",
-  "onError",
-  "onChange",
-  "onChangeMode",
-  "onClassName",
-  "onRenderValue",
-  "onRenderMenu",
-  "queryLanguages",
-  "queryLanguageId",
-  "onChangeQueryLanguage",
-  "onFocus",
-  "onBlur",
+  'content',
+  'mode',
+  'mainMenuBar',
+  'navigationBar',
+  'statusBar',
+  'readOnly',
+  'indentation',
+  'tabSize',
+  'escapeControlCharacters',
+  'escapeUnicodeCharacters',
+  'validator',
+  'onError',
+  'onChange',
+  'onChangeMode',
+  'onClassName',
+  'onRenderValue',
+  'onRenderMenu',
+  'queryLanguages',
+  'queryLanguageId',
+  'onChangeQueryLanguage',
+  'onFocus',
+  'onBlur',
 ];
 
 function pickDefinedProps(object, propNames) {
@@ -42,22 +42,22 @@ function pickDefinedProps(object, propNames) {
 }
 
 export default {
-  name: "VueJSONEditor",
+  name: 'VueJSONEditor',
   props: propNames,
   mounted() {
     this.editor = new JSONEditor({
-      target: this.$refs["editor"],
+      target: this.$refs['editor'],
       props: pickDefinedProps(this, propNames),
     });
-    console.log("create editor", this.editor);
+    console.log('create editor', this.editor);
   },
   updated() {
     const props = pickDefinedProps(this, propNames);
-    console.log("update props", props);
+    console.log('update props', props);
     this.editor.updateProps(props);
   },
   beforeUnmount() {
-    console.log("destroy editor");
+    console.log('destroy editor');
     this.editor.destroy();
     this.editor = null;
   },

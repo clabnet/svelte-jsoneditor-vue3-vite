@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <h1>svelte-jsoneditor in Vue</h1>
+    <h1>svelte-jsoneditor-vue3-vite</h1>
 
     <p>
       <label>
@@ -22,14 +22,14 @@
     </div>
 
     <h2>Contents</h2>
-    <pre><code>{{JSON.stringify(content, null, 2)}}</code></pre>
+    <pre><code>{{ JSON.stringify(content, null, 2) }}</code></pre>
   </div>
 </template>
 
 <script>
-import VueJSONEditor from "./components/VueJSONEditor.vue";
+import VueJSONEditor from './components/VueJSONEditor.vue';
 export default {
-  name: "App",
+  name: 'App',
   components: {
     VueJSONEditor,
   },
@@ -39,8 +39,8 @@ export default {
       readOnly: false,
       content: {
         json: {
-          greeting: "Hello World",
-          color: "#ff3e00",
+          greeting: 'Hello World',
+          color: '#ff3e00',
           ok: true,
           values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
         },
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     onChange: function (content) {
-      console.log("onChange", content);
+      console.log('onChange', content);
       this.content = content;
     },
   },

@@ -1,24 +1,27 @@
-# t
+# Svelte JsonEditor Vue3 Vite Typescript
 
 ## Project setup
 ```
-yarn install
+pnpm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+pnpm dev
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+pnpm build
+```
+
+### Serve preview as production
+```
+pnpm preview
 ```
 
 ### Lints and fixes files
 ```
-yarn lint
+pnpm lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
